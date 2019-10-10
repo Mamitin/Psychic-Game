@@ -14,47 +14,39 @@ var computerGuess = "";
 var userGuess = "";
 var loses = 0;
 
-    //userGuess
-    document.onkeyup = function (event) {
-        console.log("onkeyup works")
-        computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        console.log(computerGuess);
-        //capture userGuess
-        userGuess = event.key;
-        console.log(userGuess);
-        console.log(event);
-        // function to compare userGuess and ComputerChoices
-
-        //if computerGuess is not equal to userGuess = false //compare guesses
-       if (computerGuess == userGuess) {
-          wins++;
-       } else {
-          loses++;
-            //guesses left - decrease
-            //loses counted
+//userGuess
+document.onkeyup = function (event) {
+    //console.log("onkeyup works")
+    //set computer auto generated guess using math.random()
+    computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    //console.log(computerGuess);
+    //capture userGuess
+    function guessesSoFar() {
+        document.querySelector("letter").innerHTML = "Your guesses so far: " + letterUser.join();
     }
-    } 
-//register user's guess
+    userGuess = event.key;
+    //console.log(userGuess);
+    //console.log(event);
+    // function to compare userGuess and ComputerChoices
 
-//set computer auto generated guess using math.random()
+    //if computerGuess is not equal to userGuess = false //compare guesses
+    if (computerGuess == userGuess) {
+        wins++;
+    } else {
+        loses++;
+        //loses counted
+        //guesses left - decrease
+        function countGuessesLeft() {
+            document.querySelector("guessesLeft").innerHTML = "Guesses Left: " + letterUser.join('');
+        }
 
-//console.log(computerGuess);
-
-
-
-//guesses left
-// minus guesses left
-function countGuessesLeft() {
-    document.querySelector("guessesLeft").innerHTML = "Guesses Left: " + letterUser.join('');
+    }
 }
+
+//minus guesses left
 
 //guessesSoFar
-function guessesSoFar() {
-    document.querySelector("letter").innerHTML = "Your guesses so far: " + letterUser.join();
-}
 
-//guessesLeft
-//countGuessesLeft();
 
 //display alert
 
