@@ -17,7 +17,7 @@ Upon opening the page, the computer will pick a number and keep it hidden. The u
 - GitLab
 - GitHub
 
-## Assignments (works in preogress):
+## Assignments (works in progress):
 
 - [Profile](https://github.com/Mamitin/Basic-portfolio/blob/master/portfolio.html)
 - [Portfolio](https://github.com/Mamitin/Basic-portfolio/blob/master/portfolio.html)
