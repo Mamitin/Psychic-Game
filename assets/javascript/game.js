@@ -7,36 +7,37 @@ var computerGuess = "";
 var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var userGuess = "";
 
-computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-console.log(computerChoices);
 
 function guessPl() {
     computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-console.log(computerChoices);
-}
+    console.log('the computer Guessed: ' + computerGuess);
+} 
 
+guessPl();
 
 //userGuess
 document.onkeyup = function (event) {
     userGuess = event.key;
     console.log("onkeyup works");
-    console.log(event);
+    console.log(userGuess);
 
     if (computerGuess == userGuess) {
         wins++;
-        guessesLeft;
-        usersChoice;
+        guessesLeft = 10;
+        //usersChoice;
+        guessPl();
     }
 
-    guessPl();
     if (userGuess !== computerGuess) {
         guessesLeft--;
+        console.log(guessesLeft);
     }
-
+    
     if (guessesLeft == 0) {
         losses++;
         usersChoice = [];
         guessesLeft = 10;
+        guessPl();
         //loses counted
         //guesses left - decrease
     }
@@ -45,21 +46,24 @@ document.onkeyup = function (event) {
 
     } else {
         usersChoice.push(userGuess);
-        var usersGuessGuess = document.getElementById(userGuess);
+        //var usersGuessGuess = document.getElementById(userGuess);
         console.log(usersChoice);
         console.log(userGuess);
-
-        winsText.textContent = "Wins: " + wins;
-        lossesText.textContent = "Losses: " + losses;
-        guessesLeft.textContent = "Guesses left: " + guessesLeft;
-        guessesSoFar.textContent = "Your guesses so far: " + userGuess;
-
     }
+    
+    winsText = document.getElementById("winsText");
+    console.log(winsText.textContent)
+    lossesText = document.getElementById("lossesText");
+    guessesLeftText = document.getElementById("guessesLeft");
+    guessesSoFarText = document.getElementById("guessesSoFarText");
+
+    winsText.textContent = "Wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
+    guessesLeftText.textContent = "Guesses left: " + guessesLeft;
+    guessesSoFarText.textContent = "Your guesses so far: " + usersChoice;
+
 }
 
-var winsText = document.getElementById("winsText");
-var lossesText = document.getElementById("losses");
-var guessesLeft = document.getElementById("guessesLeft");
 
     //display alert
     //out of turns alert
