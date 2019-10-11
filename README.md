@@ -1,4 +1,4 @@
-# UC Berkley Fullstack Coding Bootcamp
+# UC Berkeley Fullstack Coding Bootcamp
 
 # Psychic Game
 
