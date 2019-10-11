@@ -17,5 +17,13 @@ Upon opening the page, the computer will pick a number and keep it hidden. The u
 - GitLab
 - GitHub
 
+## Assignments (works in preogress):
+
+- [Profile](https://github.com/Mamitin/Basic-portfolio/blob/master/portfolio.html)
+- [Portfolio](https://github.com/Mamitin/Basic-portfolio/blob/master/portfolio.html)
+- [Contact](https://github.com/Mamitin/Basic-portfolio/blob/master/contact.html)
+- [Wireframe](https://github.com/Mamitin/HW-Wireframe/blob/master/index.html)
+- [Bootstrap Portfolio](https://github.com/Mamitin/Bootstrap-Portfolio/blob/master/index.html)
+
 ## Contributing
 Please find me on [Linkedin](https://www.linkedin.com/in/monica-amitin-58635475/).
