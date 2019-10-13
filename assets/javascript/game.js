@@ -23,6 +23,7 @@ document.onkeyup = function (event) {
 
     if (computerGuess == userGuess) {
         wins++;
+        usersChoice = [];
         guessesLeft = 10;
         //usersChoice;
         guessPl();
@@ -35,8 +36,8 @@ document.onkeyup = function (event) {
     
     if (guessesLeft == 0) {
         losses++;
-        usersChoice = [];
         guessesLeft = 10;
+        usersChoice = [];
         guessPl();
         //loses counted
         //guesses left - decrease
